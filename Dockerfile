@@ -1,10 +1,11 @@
 FROM mattermost/mattermost-team-edition:latest
 
-# Set working directory
 WORKDIR /mattermost
 
-# Expose port
+COPY config.json /mattermost/config/config.json
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
 EXPOSE 8065
 
-# Default command
 ENTRYPOINT ["/entrypoint.sh"]
