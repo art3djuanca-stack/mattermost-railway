@@ -1,0 +1,10 @@
+{
+  "ServiceSettings": {
+    "SiteURL": "",
+    "ListenAddress": ":8065"
+  },
+  "SqlSettings": {
+    "DriverName": "postgres",
+    "DataSource": "${DATABASE_URL}"
+  }
+}
